@@ -1,0 +1,1063 @@
+// ------------------INTERNAL EXAMS DS-------------------
+
+
+// 1.
+
+// #include <stdio.h>
+// enum Weekday {
+//     SUNDAY,    // Default value is 0
+//     MONDAY,    // Default value is 1
+//     TUESDAY,   // Default value is 2
+//     WEDNESDAY, // Default value is 3
+//     THURSDAY,  // Default value is 4
+//     FRIDAY,    // Default value is 5
+//     SATURDAY   // Default value is 6
+// };
+// int main() {
+//     enum Weekday w = SUNDAY;
+//     printf("%d\n ", w);
+
+//     w = 3;
+//     printf("%d ", w);
+//     return 0;
+// }
+
+// 2.
+
+
+// #include <stdio.h>
+
+// // Defining enum
+// enum direction {
+// 	EAST, NORTH, WEST, SOUTH
+// };
+
+// int main() {
+
+// 	// Creating enum variable
+// 	enum direction dir = NORTH;
+// 	printf("%d\n", dir);
+
+// 	// This is valid too
+// 	dir = 3;
+// 	printf("%d", dir);
+// 	return 0;
+// }
+
+
+// 3.
+
+
+// #include <stdio.h>
+
+// // Defining enum
+// enum direction {
+// 	EAST, NORTH, WEST, SOUTH
+// };
+
+// int main() {
+// 	// Enum to string mapping
+// 	const char* direction_names[] = {"EAST", "NORTH", "WEST", "SOUTH"};
+
+// 	enum direction dir = NORTH;
+// 	printf("Direction value: %d\n", dir);
+// 	printf("Direction name: %s\n", direction_names[dir]);
+
+// 	dir = 3; // SOUTH
+// 	printf("Direction value: %d\n", dir);
+// 	printf("Direction name: %s\n", direction_names[dir]);
+
+// 	return 0;
+// }
+
+
+// 4.
+
+// #include<stdio.h>
+
+// int main() {
+//     int r, c;
+//     int mat1[r][c], mat2[r][c],C[r][c];
+    
+//     // Input the dimensions of the matrices
+//     printf("Enter the number of rows and columns of the matrices: ");
+//     scanf("%d %d", &r, &c);
+
+//     // Input elements of the first matrix
+//     for (int i = 0; i < r; i++) {
+//         for (int j = 0; j < c; j++) {
+//             printf("Enter the elements of the first matrix[%d][%d]:\n",i,j);
+//             scanf("%d", &mat1[i][j]);
+//         }
+//     }
+
+//     // Input elements of the second matrix
+//     for (int i = 0; i < r; i++) {
+//         for (int j = 0; j < c; j++) {
+//             printf("Enter the elements of the second matrix[%d][%d]:\n",i,j);
+//             scanf("%d", &mat2[i][j]);
+//         }
+//     }
+
+//     // Add the two matrices
+//     for (int i = 0; i < r; i++) {
+//         for (int j = 0; j < c; j++) {
+//             C[i][j] = mat1[i][j]+ mat2[i][j];
+//         }
+//     }
+
+//     // Display the result matrix
+//     printf("Sum of the two matrices:\n");
+//     for (int i = 0; i < r; i++) {
+//         for (int j = 0; j < c; j++) {
+//             printf("%d ", C[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+
+// // 5.
+
+
+// #include <stdio.h>
+// #include <string.h>
+
+// struct student {
+//     int rollno;
+//     char name[30];
+//     char address[100];
+// };
+
+// int main() {
+//     struct student s[5];
+//     int i, j;
+
+//     // Input
+//     for (i = 0; i < 5; i++) {
+//         printf("\nEnter details for Student [%d]\n", i);
+        
+//         printf("Roll Number: ");
+//         scanf("%d", &s[i].rollno);
+        
+//         printf("Name: ");
+//         scanf("%s", s[i].name);
+        
+//         printf("Address: ");
+//         scanf(" %[^\n]", s[i].address);  // to read full address with spaces
+//     }
+
+//     // Sorting (ascending order)
+//     struct student temp;
+//     for (i = 0; i < 5 - 1; i++) {
+//         for (j = i + 1; j < 5; j++) {
+//             if (s[i].rollno > s[j].rollno) {
+//                 temp = s[i];
+//                 s[i] = s[j];
+//                 s[j] = temp;
+//             }
+//         }
+//     }
+
+//     // Output
+//     printf("\n\nSorted Student Records (by Roll Number):\n");
+//     for (i = 0; i < 5; i++) {
+//         printf("\n-----------------------------------------");
+//         printf("\nRoll Number = %d", s[i].rollno);
+//         printf("\nName = %s", s[i].name);
+//         printf("\nAddress = %s", s[i].address);
+//     }
+
+//     return 0;
+// }
+
+// 6.
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     cout << "Enter the size of square matrix: ";
+//     cin >> n;  // Input size of the matrix
+
+//     int matrix[n][n];
+
+//     // Step 1: Take matrix input
+//     cout << "Enter the elements of the matrix:\n";
+//     for (int i = 0; i < n; i++) {
+//         for (int j = 0; j < n; j++) {
+//             cin >> matrix[i][j];
+//         }
+//     }
+
+//     // Step 2: Print only upper triangle
+//     cout << "\nUpper triangular elements:\n";
+//     for (int i = 0; i < n; i++) {         // Loop through rows
+//         for (int j = 0; j < n; j++) {     // Loop through columns
+//             if (j >= i)                   // Only upper triangle elements
+//                 cout << matrix[i][j] << " ";
+//             else
+//                 cout << "  ";             // Print spaces to keep the triangle shape
+//         }
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+// 7.
+
+// upper triangular matrix 
+
+// #include <iostream>
+// using namespace std;
+// int main() {
+//     int n;
+//     cin >> n;
+
+//     int matrix[n][n];
+//     for (int i = 0; i < n; i++)
+//         for (int j = 0; j < n; j++)
+//             cin >> matrix[i][j];
+
+//     for (int i = 0; i < n; i++) {
+//         for (int j = i; j < n; j++)
+//             cout << matrix[i][j] << " ";
+//         cout << endl;
+//     }
+//     return 0;
+// }
+
+// 8.
+
+// lower triangular matrix
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     cout<<"Enter :";
+//     cin >> n;
+//     int matrix[n][n];
+//     for (int i = 0; i < n; i++)
+//         for (int j = 0; j < n; j++)
+//             cin >> matrix[i][j];
+
+//     for (int i = 0; i < n; i++) {
+//         for (int j = 0; j <= i; j++)
+//             cout << matrix[i][j] << " ";
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+// 9.
+
+// #include <stdio.h>
+
+// int main() {
+//     int rows, cols;
+//     printf("Enter number of rows and columns: ");
+//     scanf("%d %d", &rows, &cols);
+
+//     int matrix[rows][cols];
+//     int Count = 0, total = rows * cols;
+
+//     printf("Enter matrix elements:\n");
+//     for (int i = 0; i < rows; i++) {
+//         for (int j = 0; j < cols; j++) {
+//             scanf("%d", &matrix[i][j]);
+//             if (matrix[i][j] == 0)
+//                 Count++;
+//         }
+//     }
+    
+//     if (Count > total / 2){
+//         printf("The matrix is sparse.\n");
+//     }
+//     else{
+//         printf("The matrix is not sparse.\n");
+//     }
+//     return 0;
+// }
+
+// 10. STACK--------------------
+
+// // #include <iostream>
+// // using namespace std;
+
+// // int stackArr[5], top = -1, n;
+// // void push() {
+// //     int item;
+// //     if (top < 4) {
+// //         cout << "Enter the number: ";
+// //         cin >> item;
+// //         top++;
+// //         stackArr[top] = item;
+// //     } else {
+// //         cout << "Stack Overflow" << endl;
+// //     }
+// // }
+
+// // void display() {
+// //     if (top == -1) {
+// //         cout << "Stack is Empty" << endl;
+// //     } else {
+// //         cout << "Stack elements are: ";
+// //         for (int i = top; i >= 0; i--) {
+// //             cout << stackArr[i] << " "<<endl;
+// //         }
+// //         cout << endl;
+// //     }
+// // }
+
+// // int main() {
+// //     cout<<"Enter how many elements you need:";
+// //     cin<<n;
+// //     for(int i=1;i<=n;i++){
+// //         push();
+// //     }
+// //     display();
+// //     return 0;
+// // }
+// // #include <stdio.h>
+// // int main() {
+// // 	int SIZE=10;
+// // 	int stack[SIZE], top = -1;
+// // 	int n, item;
+
+// // 	printf("How many elements you want to push (0-10):");
+// // 	scanf("%d", &n);
+
+// // 	for (int i = 0; i <= n;
+
+// // 	        i++) {
+// // 		if (top <= SIZE - 1) {
+// // 			printf("Enter element %d: ", i);
+// // 			scanf("%d", &item);
+// // 			top++;
+// // 			stack[top] = item;
+// // 		} else {
+// // 			printf("Stack Overflow! Cannot push more elements.\n");
+// // 			break;
+// // 		}
+// // 	}
+
+// // 	if (top == -1) {
+// // 		printf("Stack is Empty\n");
+// // 	} else {
+// // 		printf("Stack elements are: \n");
+// // 		for (int i = top; i >= 0; i--) {
+// // 			printf("%d \n ", stack[i]);
+// // 		}
+// // 		printf("\n");
+// // 	}
+
+// // 	return 0;
+// // }
+
+// // #include <stdio.h>
+
+// // int SIZE = 5;
+// // int a[5], top = -1;
+
+// // int main() {
+// //     int n, item;
+
+// //     printf("How many elements do you want to push (max %d)? ", SIZE);
+// //     scanf("%d", &n);
+
+// //     for (int i = 0; i < n; i++) {
+// //         printf("Enter element %d: ", i);
+// //         scanf("%d", &item);
+
+// //         if (top == SIZE - 1) {
+// //             printf("Stack is full\n");
+// //             break; // stop if overflow
+
+// //         } else {
+// //             top++;
+// //             a[top] = item;
+// //         }
+// //     }
+
+// //     // Display stack
+// //     if (top == -1)
+// //         printf("Stack is Empty\n");
+// //     else {
+// //         printf("Stack elements (top to bottom):\n ");
+// //         for (int i = top; i >= 0; i--)
+// //             printf("%d \n", a[i]);
+// //         printf("\n");
+// //     }
+
+// //     return 0;
+// // }
+
+// // #include <stdio.h>
+// // #define SIZE 10
+
+// // int stack[SIZE], top = -1;
+
+// // // Function to push an element
+// // void push(int item) {
+// //     if (top >= SIZE - 1) {
+// //         printf("Stack Overflow! Cannot push more elements.\n");
+// //     } else {
+// //         top++;
+// //         stack[top] = item;
+// //     }
+// // }
+
+// // // Function to display stack
+// // void display() {
+// //     if (top == -1) {
+// //         printf("Stack is Empty\n");
+// //     } else {
+// //         printf("Stack elements are:\n");
+// //         for (int i = top; i >= 0; i--) {
+// //             printf("%d\n", stack[i]);
+// //         }
+// //         printf("\n");
+// //     }
+// // }
+
+// // int main() {
+// //     int n, item;
+
+// //     printf("How many elements you want to push (0-%d): ", SIZE);
+// //     scanf("%d", &n);
+    
+// //     for (int i = 0; i < n; i++) {
+// //         printf("Enter element %d: ", i);
+// //         scanf("%d", &item);
+// //         push(item);
+// //     }
+// //     display();
+
+// //     return 0;
+// // }
+
+
+
+// #include <stdio.h>
+// #define SIZE 10
+
+// int stack[SIZE], top = -1;
+
+// // Function to push an element
+// void push(int item) {
+//     if (top >= SIZE - 1) {
+//         printf("Stack Overflow! Cannot push more elements.\n");
+//     } else {
+//         top++;
+//         stack[top] = item;
+//     }
+// }
+
+// // Function to pop an element
+// void pop() {
+//     if (top == -1) {
+//         printf("Stack Underflow! Cannot pop from empty stack.\n");
+//     } else {
+//         printf("Popped element: %d\n", stack[top]);
+//         top--;
+//     }
+// }
+
+// // Function to display stack
+// void display() {
+//     if (top == -1) {
+//         printf("Stack is Empty\n");
+//     } else {
+//         printf("Stack elements are:\n");
+//         for (int i = top; i >= 0; i--) {
+//             printf("%d\n", stack[i]);
+//         }
+//         printf("\n");
+//     }
+// }
+
+// int main() {
+//     int n, item, choice;
+
+//     printf("How many elements you want to push (0-%d): ", SIZE);
+//     scanf("%d", &n);
+    
+//     for (int i = 0; i < n; i++) {
+//         printf("Enter element %d: ", i);
+//         scanf("%d", &item);
+//         push(item);
+//     }
+    
+//     // pop();
+    
+//     display();
+    
+//     // Pop demo
+    
+//     printf("How many elements you want to pop? ");
+//     scanf("%d", &choice);
+//     for (int i = 0; i < choice; i++) {
+//         pop();
+//     }
+//     display();
+//     return 0;
+
+// }
+
+// #include <stdio.h>
+// #define SIZE 10
+
+// int stack[SIZE], top = -1;
+
+// // Function to push an element
+// void push() {
+//     int item;
+//     if (top >= SIZE - 1) {
+//         printf("Stack Overflow! Cannot push more elements.\n");
+//     } else {
+//         printf("\nEnter element to push:\n");
+//         scanf("%d", &item);
+//         top++;
+//         stack[top] = item;
+//     }
+// }
+
+// // Function to pop an element
+// void pop() {
+//     if (top == -1) {
+//         printf("\n Stack Underflow! Cannot pop from empty stack.\n");
+//     } else {
+//         printf("\n Popped element: %d\n", stack[top]);
+//         top--;
+//     }
+// }
+
+// // Function to display stack
+// void display() {
+//     if (top == -1) {
+//         printf("\nStack is Empty\n");
+//     } else {
+//         printf("\nStack elements are:\n");
+//         for (int i = top; i >= 0; i--) {
+//             printf("%d\n", stack[i]);
+//         }
+//         printf("\n");
+//     }
+// }
+
+// int main() {
+//     int choice;
+    
+//     while (1) {
+        
+//         printf("\n--- Stack Menu ---\n");
+//         printf("1. Push\n");
+//         printf("2. Pop\n");
+//         printf("3. Display\n");
+//         printf("4. Exit\n");
+    
+//         printf("\nEnter your choice:\n");
+//         scanf("%d", &choice);
+        
+//         switch (choice) {
+            
+//             case 1:
+//                 push();
+//                 break;
+            
+//             case 2:
+//                 pop();
+//                 break;
+            
+//             case 3:
+//                 display();
+//                 break;
+            
+//             case 4:
+//                 printf("Exiting program...\n");
+//                 return 0;
+            
+//             default:
+//                 printf("Invalid choice! Please try again.\n");
+//         }
+//     }
+// }
+
+// 11.
+
+// WAP to reverse a string using stack
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int main() {
+//     string str, rev ="";
+//     cout << "Enter a string: ";
+//     cin >> str;
+
+//     int n = str.length();
+//     char stack[100];  // fixed size stack - String
+//     int top = -1;
+
+
+//     // Push
+//     for (int i = 0; i < n; i++) {
+//         stack[++top] = str[i];
+//     }
+
+//     //Pop
+//     while (top != -1) {
+//         rev += stack[top--];
+//     }
+
+//     cout << "Reversed string: " << rev;
+//     return 0;
+// }
+
+///------------------------------------------------
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main() {
+    
+//     char str[100], stack[100];
+//     int top = -1;
+
+//     printf("Enter a string: ");
+//     scanf("%s", str);
+
+//     // Push and Pop together - directly print while popping -
+    
+//     for (int i = 0; i < strlen(str); i++){
+//         stack[++top] = str[i];
+//     }
+    
+//     printf("Reversed string: ");
+//     while (top >= 0){
+//         printf("%c", stack[top--]);
+//     }
+    
+//     return 0;
+// }
+
+// 12.
+
+// #include <stdio.h>
+
+// // Linear Search
+// int linearSearch(int arr[], int n, int key) {
+//     for (int i = 0; i < n; i++) {
+//         if (arr[i] == key)
+//             return i; // found
+//     }
+//     return -1; // not found
+// }
+
+// // Binary Search (works only on sorted array)
+// int binarySearch(int arr[], int n, int key) {
+//     int low = 0, high = n - 1, mid;
+
+//     while (low <= high) {
+//         mid = (low + high) / 2;
+
+//         if (arr[mid] == key)
+//             return mid;
+//         else if (arr[mid] < key)
+//             low = mid + 1;
+//         else
+//             high = mid - 1;
+//     }
+//     return -1;
+// }
+
+// int main() {
+//     int arr[100], n, key, i;
+
+//     printf("Enter size of array: ");
+//     scanf("%d", &n);
+
+//     printf("Enter %d elements (sorted for binary search):\n", n);
+//     for (i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+
+//     printf("Enter element to search: ");
+//     scanf("%d", &key);
+
+//     // Linear Search
+//     int res1 = linearSearch(arr, n, key);
+//     if (res1 != -1)
+//         printf("Linear Search: Found at index %d\n", res1);
+//     else
+//         printf("Linear Search: Not found\n");
+
+//     // Binary Search
+//     int res2 = binarySearch(arr, n, key);
+//     if (res2 != -1)
+//         printf("Binary Search: Found at index %d\n", res2);
+//     else
+//         printf("Binary Search: Not found\n");
+
+//     return 0;
+// }
+
+//-----------------------------------------------------------------------
+
+// #include <stdio.h>
+
+// // Linear Search
+// int linearSearch(int arr[], int n, int key) {
+//     for (int i = 0; i < n; i++) {
+//         if (arr[i] == key)
+//             return i; // found-
+//     }
+//     return -1; // if not found element-
+// }
+
+// // Binary Search -works only on sorted array
+// int binarySearch(int arr[], int n, int key) {
+//     int low = 0, high = n - 1, mid;
+    
+//     while (low <= high) {
+//         mid = (low + high) / 2;
+//         if (arr[mid] == key) // found
+//             return mid;
+//         else if (arr[mid] < key)
+//             low = mid + 1; //search right
+//         else
+//             high = mid - 1; //search left
+//     }
+//     return -1; //not found
+// }
+
+// int main() {
+//     int arr[100],n, key, choice, i, result;
+
+//     printf("Enter size of array: "); 
+//     scanf("%d", &n);
+
+//     printf("Enter %d elements (sorted for binary search):\n", n);
+//     for (i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+
+//     printf("Enter element to search: ");
+//     scanf("%d", &key);
+
+//     printf("\nChoose Search Method:\n");
+//     printf("1. Linear Search\n");
+//     printf("2. Binary Search\n");
+//     printf("Enter your choice: ");
+//     scanf("%d", &choice);
+
+//     if (choice == 1) { //Linear Search
+//         result = linearSearch(arr, n, key);
+//         if (result != -1)
+//             printf("Linear Search: Found at index %d\n", result);
+//         else
+//             printf("Linear Search: Not found\n");
+//     }
+    
+//     else if (choice == 2) { //binarySearch
+//         result = binarySearch(arr, n, key);
+//         if (result != -1)
+//             printf("Binary Search: Found at index %d\n", result);
+//         else
+//             printf("Binary Search: Not found\n");
+//     }
+//     else {
+//         printf("Invalid choice!\n");
+//     }
+
+//     return 0;
+// }
+
+// 13.
+
+// #include <stdio.h>
+// #include <string.h>
+
+// #define MAX 100
+
+// char stack[MAX];
+// int top = -1;
+
+// // Push to stack
+// void push(char c) {
+//     if (top == MAX - 1) {
+//         printf("Stack Overflow!\n");
+//         return;
+//     }
+//     stack[++top] = c;
+// }
+
+// // Pop from stack
+// char pop() {
+//     if (top == -1) {
+//         printf("Stack Underflow!\n");
+//         return -1;
+//     }
+//     return stack[top--];
+// }
+
+// // Peek (top element)
+// char peek() {
+//     if (top == -1) return -1;
+//     return stack[top];
+// }
+
+// // Operator precedence
+// int precedence(char c) {
+//     if (c == '^') return 3;
+//     if (c == '*' || c == '/') return 2;
+//     if (c == '+' || c == '-') return 1;
+//     return 0;
+// }
+
+// // Check if operand (letter or digit)
+// int isOperand(char c) {
+//     if ((c >= 'A' && c <= 'Z') || 
+//         (c >= 'a' && c <= 'z') || 
+//         (c >= '0' && c <= '9'))
+//         return 1;
+//     return 0;
+// }
+
+// // Infix to Postfix
+// void infixToPostfix(char infix[]) {
+//     char postfix[MAX];
+//     int i, k = 0;
+
+//     for (i = 0; i < strlen(infix); i++) {
+//         char c = infix[i];
+
+//         // Operand -> directly to postfix
+//         if (isOperand(c)) {
+//             postfix[k++] = c;
+//         }
+//         // '(' -> push
+//         else if (c == '(') {
+//             push(c);
+//         }
+//         // ')' -> pop until '('
+//         else if (c == ')') {
+//             while (peek() != '(' && top != -1) {
+//                 postfix[k++] = pop();
+//             }
+//             if (top == -1) {
+//                 printf("Error: Mismatched parentheses!\n");
+//                 return;
+//             }
+//             pop(); // remove '('
+//         }
+//         // Operator
+//         else {
+//             while (precedence(peek()) >= precedence(c)) {
+//                 postfix[k++] = pop();
+//             }
+//             push(c);
+//         }
+//     }
+
+//     // Pop remaining operators
+//     while (top != -1) {
+//         if (peek() == '(') {  
+//             printf("Error: Mismatched parentheses!\n");
+//             return;
+//         }
+//         postfix[k++] = pop();
+//     }
+
+//     postfix[k] = '\0';
+
+//     printf("Postfix Expression: %s\n", postfix);
+// }
+
+// int main() {
+//     char infix[MAX];
+
+//     printf("Enter Infix Expression: ");
+//     scanf("%s", infix);
+
+//     infixToPostfix(infix);
+
+//     return 0;
+// }
+
+
+// 14.
+
+
+// //Create a stack using array of characters and perform the operation of push and pop!!!
+
+// #include <stdio.h>
+// #define SIZE 10
+
+// char stack[SIZE];  
+// int top = -1;
+
+// // Function to push a character
+// void push() {
+//     char item;
+//     if (top >= SIZE - 1) {
+//         printf("Stack Overflow! Cannot push more elements.\n");
+//     } else {
+//         printf("\nEnter character to push:\n");
+//         scanf(" %c", &item);  // notice space before %c to ignore newline
+//         top++;
+//         stack[top] = item;
+//     }
+// }
+
+// // Function to pop a character
+// void pop() {
+//     if (top == -1) {
+//         printf("\nStack Underflow! Cannot pop from empty stack.\n");
+//     } else {
+//         printf("\nPopped character: %c\n", stack[top]);
+//         top--;
+//     }
+// }
+
+// // Function to display stack
+// void display() {
+//     if (top == -1) {
+//         printf("\nStack is Empty\n");
+//     } else {
+//         printf("\nStack characters are:\n");
+//         for (int i = top; i >= 0; i--) {
+//             printf("%c\n", stack[i]);
+//         }
+//         printf("\n");
+//     }
+// }
+
+// int main() {
+//     int choice;
+    
+//     while (1) {
+        
+//         printf("\n--- Character Stack Menu ---\n");
+//         printf("1. Push\n");
+//         printf("2. Pop\n");
+//         printf("3. Display\n");
+//         printf("4. Exit\n");
+    
+//         printf("\nEnter your choice:\n");
+//         scanf("%d", &choice);
+        
+//         switch (choice) {
+            
+//             case 1:
+//                 push();
+//                 break;
+            
+//             case 2:
+//                 pop();
+//                 break;
+            
+//             case 3:
+//                 display();
+//                 break;
+            
+//             case 4:
+//                 printf("Exiting program...\n");
+//                 return 0;
+            
+//             default:
+//                 printf("Invalid choice! Please try again.\n");
+//         }
+//     }
+// }
+
+// 15.
+
+// #include <stdio.h>
+// #define SIZE 10
+
+// char queue[SIZE];
+// int front = -1, rear = -1;
+
+// // Function to insert a character into queue
+// void enqueue() {
+//     char item;
+//     if (rear == SIZE - 1) {
+//         printf("\nQueue Overflow! Cannot insert more elements.\n");
+//     } else {
+//         printf("\nEnter character to insert:\n");
+//         scanf(" %c", &item);  // space before %c to skip newline
+//         if (front == -1)   // first insertion
+//             front = 0;
+//         rear++;
+//         queue[rear] = item;
+//     }
+// }
+
+// // Function to delete a character from queue
+// void dequeue() {
+//     if (front == -1 || front > rear) {
+//         printf("\nQueue Underflow! Cannot delete from empty queue.\n");
+//     } else {
+//         printf("\nDeleted character: %c\n", queue[front]);
+//         front++;
+//     }
+// }
+
+// // Function to display queue
+// void display() {
+//     if (front == -1 || front > rear) {
+//         printf("\nQueue is Empty\n");
+//     } else {
+//         printf("\nQueue characters are:\n");
+//         for (int i = front; i <= rear; i++) {
+//             printf("%c ", queue[i]);
+//         }
+//         printf("\n");
+//     }
+// }
+
+// int main() {
+//     int choice;
+    
+//     while (1) {
+        
+//         printf("\n--- Character Queue Menu ---\n");
+//         printf("1. Enqueue\n");
+//         printf("2. Dequeue\n");
+//         printf("3. Display\n");
+//         printf("4. Exit\n");
+        
+//         printf("\nEnter your choice:\n");
+//         scanf("%d", &choice);
+        
+//         switch (choice) {
+//             case 1:
+//                 enqueue();
+//                 break;
+            
+//             case 2:
+//                 dequeue();
+//                 break;
+            
+//             case 3:
+//                 display();
+//                 break;
+            
+//             case 4:
+//                 printf("Exiting program...\n");
+//                 return 0;
+            
+//             default:
+//                 printf("Invalid choice! Please try again.\n");
+//         }
+//     }
+// }

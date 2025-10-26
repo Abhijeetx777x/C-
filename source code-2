@@ -1,0 +1,832 @@
+//----------------------------------OOPS-INTERNAL EXAMS------------------------------------------------------------------
+
+// 1.
+
+// #include <iostream.h>
+// #include<conio.h>
+// int main()
+// {
+// // 	int n,a;
+// // 	cin>>n;
+// // 	for(int i=0; i<=10; i++) {
+// // 		a=n*i;
+// //         cout << n << " x " << i << " = " << a << endl;
+// 	getch();
+// }
+
+// 2.
+
+// #include <iostream.h>
+// #include <conio.h>
+// int main() {
+//   int age;
+//   cout << "AGE? ";
+//   cin >> age;
+//   cout << "YOUR AGE IS:" << age << endl;
+//   getch();
+// }
+
+// 3.
+
+// #include <iostream.h>
+// #include <conio.h>
+// int main()
+// {
+//     //Input and Output
+    
+//     int m1,m2,s;
+//     cout<<"Marks 1:";
+//     cin>>m1;
+//     cout<<"Marks 2:";
+//     cin>>m2;
+//     s=m1+m2;
+//     int avg=s/2;
+    
+//     cout<<"Sum is:"<<s<<endl; //Sum
+//     cout<<"Average is:"<<avg<<"%"<<endl; //Average
+    
+//     //Grading mechanism
+    
+//     if(s>=70 && s<=100){
+//         cout<<"A";
+//     }else if(s>=40 && s<=69){
+//         cout<<"B";
+//     }else{
+//         cout<<"F";
+//     }
+//     getch();
+// }
+
+
+// 6.
+
+// #include <iostream>
+// using namespace std;
+
+// class Calculator {
+// public:
+//     int sum(int a, int b);  // Function declaration (prototype) inside class
+// };
+
+// // Function definition outside the class
+// int Calculator::sum(int a, int b) {
+//     return a + b;
+// }
+
+// int main() {
+//     Calculator calc;
+//     int num1, num2;
+
+//     cout << "Enter first number: ";
+//     cin >> num1;
+
+//     cout << "Enter second number: ";
+//     cin >> num2;
+
+//     int result = calc.sum(num1, num2);
+//     cout << "The sum is: " << result << endl;
+
+//     return 0;
+// }
+
+// 7.
+
+//WAP to use inline functions.
+
+// // #include <iostream>
+// // using namespace std;
+
+// // inline int square(int n) {
+// //     return n * n;
+// // }
+
+// // int main() {
+// //     int num;
+// //     cout << "Enter a number: ";
+// //     cin >> num;
+
+// //     cout << "Square is:" << square(num) << endl;
+// //     return 0;
+// // }
+
+// 8.
+
+// #include <iostream>
+// using namespace std;
+
+// //WAP Function to swap using reference variables
+
+// // void swap(int &x, int &y) {
+// //     int temp = x;
+// //     x = y;
+// //     y = temp;
+// // }
+
+// // int main() {
+// //     int a, b;
+
+// //     cout << "Enter 1st numbers: "<<endl;
+// //     cin >> a;
+
+// //     cout << "Enter 2nd numbers: "<<endl;
+// //     cin >> b;
+
+// //     cout << "Before swapping: a = " << a << ", b = " << b << endl;
+
+// //     swap(a, b);
+
+// //     cout << "After swapping: a = " << a << ", b = " << b << endl;
+
+// //     return 0;
+// // }
+
+// 9.
+
+// //WAP to take input and display output to an matrix of size m*n using class and objects-
+
+// #include <iostream>
+// using namespace std;
+
+// class Matrix {
+// private:
+// 	int m, n;
+// 	int mat[10][10]; // for adjustment needed in size uk
+
+// public:
+// 	void getInput() {
+// 		cout << "Enter number of rows (m): ";
+// 		cin >> m;
+// 		cout << "Enter number of columns (n): ";
+// 		cin >> n;
+
+// 		cout << "Enter elements of the matrix:\n";
+// 		for (int i = 0; i < m; i++) {
+// 			for (int j = 0; j < n; j++) {
+// 				cout << "Element [" << i << "][" << j << "]: ";
+// 				cin >> mat[i][j];
+// 			}
+// 		}
+// 	}
+
+// 	void display() {
+// 		cout << "\nThe matrix is:\n";
+// 		for (int i = 0; i < m; i++) {
+// 			for (int j = 0; j < n; j++) {
+// 				cout << mat[i][j] << "\t";
+// 			}
+// 			cout << endl;
+// 		}
+// 	}
+// };
+
+// int main() {
+// 	Matrix mat1; // object bnaao
+// 	mat1.getInput();
+// 	mat1.display();
+
+// 	return 0;
+// }
+
+// 10.
+// #include <iostream>
+// using namespace std;
+
+// class College {
+// private:
+//     int std_id;   // Data member
+
+// public:
+//     // Function to get ID from user
+//     void getId() {
+//         cout << "Enter student ID: ";
+//         cin >> std_id;
+//     }
+
+//     // Function to display ID
+//     void putId() {
+//         cout << "Student ID: " << std_id << endl;
+//     }
+// };
+
+// int main() {
+//     College c1, c2;  // Objects
+
+//     // Get IDs for each object
+//     c1.getId();
+//     c2.getId();
+
+//     // Display IDs
+//     c1.putId();
+//     c2.putId();
+
+//     return 0;
+// }
+
+// 11.
+
+// #include <iostream>
+// using namespace std;
+
+// class College {
+
+// private:
+// 	int stu_id;
+// public:
+// 	void getId(int a) {
+// 		stu_id=a;
+// 	}
+// 	void putId() {
+// 		cout << "Student ID: " << stu_id << endl;
+// 	}
+// };
+
+// int main() {
+// 	College c1, c2;
+// 	c1.getId(120);
+// 	c2.getId(130);
+
+// 	c1.putId();
+// 	c2.putId();
+
+// 	return 0;
+// }
+
+//12.
+
+// Create a class Circle and find area,circumference.
+
+// #include <iostream>
+// using namespace std;
+
+// class Circle {
+
+// private:
+// 	float radius;
+
+// public:
+// 	void getRadius(float r) {
+// 		radius = r;
+// 	}
+
+// 	void area() {
+//  		cout << "Area: " << 3.14 * radius * radius << endl;
+// 	}
+
+// 	void circumference() {
+// 		cout << "Circumference: " << 2 * 3.14 * radius << endl;
+// 	}
+// };
+
+// int main() {
+// // i/p
+// 	Circle c1, c2;
+// //c1 and c2 o/p radius
+// 	c1.getRadius(3);
+// 	c2.getRadius(4);
+// //c1
+// 	c1.area();
+// 	c1.circumference();
+// //c2
+// 	c2.area();
+// 	c2.circumference();
+
+// 	return 0;
+// }
+
+// 13.
+
+// #include <iostream>
+// using namespace std;
+
+// class Employee {
+// private:
+//     int emp_id;
+//     int dept_id;
+// public:
+//     string name;
+//     int age;
+    
+//     void empInfo(int a, int b) {
+//         emp_id = a;
+//         dept_id = b;
+//     }
+//     void empDetails() {
+//         cout << "Employee ID: " << emp_id << endl;
+//         cout << "Department ID: " << dept_id << endl;
+//         cout << "Name: " << name << endl;
+//         cout << "Age: " << age << endl;
+//         cout << "------------------------" << endl;
+//     }
+// };
+
+// int main() {
+//     Employee emp1, emp2;
+
+//     // Input details for emp1
+//     cout << "Enter details for Employee 1:\n";
+//     int id1, dept1;
+//     cout << "Enter Employee ID - 1: ";
+//     cin >> id1;
+//     cout << "Enter Department ID:-1 ";
+//     cin >> dept1;
+//     cout << "Enter Name: ";
+//     cin >> emp1.name;
+//     cout << "Enter Age: ";
+//     cin >> emp1.age;
+
+//     emp1.empInfo(id1, dept1);
+    
+//     // Input details for emp2
+    
+//     cout << "Enter details for Employee 2:\n";
+//     int id2, dept2;
+//     cout << "Enter Employee ID-2: ";
+//     cin >> id2;
+//     cout << "Enter Department ID-2: ";
+//     cin >> dept2;
+//     cout << "Enter Name: ";
+//     cin >> emp2.name;
+//     cout << "Enter Age: ";
+//     cin >> emp2.age;
+
+//     emp2.empInfo(id2, dept2);
+    
+//     cout<<"Employe details"<<endl;
+    
+//     emp1.empDetails();
+//     emp2.empDetails();
+
+//     return 0;
+// }
+
+
+// TURBO C
+
+// #include <iostream.h>
+// #include <conio.h>
+
+// class Employee {
+// private:
+//     int emp_id;
+//     int dept_id;
+// public:
+//     char name[50];
+//     int age;
+
+//     void empInfo(int a, int b);     
+//     void empDetails();              
+// };
+
+// void Employee::empInfo(int a, int b) {
+//     emp_id = a;
+//     dept_id = b;
+// }
+
+// void Employee::empDetails() {
+//     cout << "Employee ID: " << emp_id << endl;
+//     cout << "Department ID: " << dept_id << endl;
+//     cout << "Name: " << name << endl;
+//     cout << "Age: " << age << endl;
+//     cout << "------------------------" << endl;
+// }
+
+// int main() {
+//     clrscr();
+    
+//     Employee emp1, emp2;
+
+//     // Input details for Employee 1
+//     int id1, dept1;
+//     cout << "Enter details for Employee 1:\n";
+//     cout << "Enter Employee ID - 1: ";
+//     cin >> id1;
+//     cout << "Enter Department ID - 1: ";
+//     cin >> dept1;
+//     cout << "Enter Name: ";
+//     cin >> emp1.name;
+//     cout << "Enter Age: ";
+//     cin >> emp1.age;
+//     emp1.empInfo(id1, dept1);
+
+//     // Input details for Employee 2
+//     int id2, dept2;
+//     cout << "\nEnter details for Employee 2:\n";
+//     cout << "Enter Employee ID - 2: ";
+//     cin >> id2;
+//     cout << "Enter Department ID - 2: ";
+//     cin >> dept2;
+//     cout << "Enter Name: ";
+//     cin >> emp2.name;
+//     cout << "Enter Age: ";
+//     cin >> emp2.age;
+//     emp2.empInfo(id2, dept2);
+
+//     // Display Employee Details
+//     cout << "\nEmployee Details\n";
+//     emp1.empDetails();
+//     emp2.empDetails();
+
+//     getch();
+//     return 0;
+// }
+
+
+// 14.
+
+// #include<iostream>
+// using namespace std;
+// class store {
+//     char store_name[50];
+//     int store_id;
+//     static int nextID; 
+// public:
+//     void getdata() {
+//         cout << "Enter Store Name: ";
+//         cin >> store_name; 
+//         store_id = nextID; 
+//         nextID++;          
+//     }
+//     void display() {
+//         cout << "Store Name: " << store_name <<endl;
+//         cout << "Store ID: " << store_id <<endl;
+//     }
+// };
+
+// //static member
+// int store::nextID = 1;
+
+// int main() {
+//     store s1, s2, s3;
+
+//     s1.getdata();
+//     s2.getdata();
+//     s3.getdata();
+
+//     cout<<"\nDetails:\n"<<endl;
+//     s1.display();
+//     s2.display();
+//     s3.display();
+
+//     return 0;
+// }
+
+
+// #include<iostream.h>
+// #include<string.h>
+
+// class store {
+//     char store_name[50];
+//     int store_id;
+//     static int nextID; // static variable for unique IDs
+// public:
+//     void getdata(char name[]) {
+//         strcpy(store_name, name);
+//         store_id = nextID; // assign current ID
+//         nextID++;          // increment for next store
+//     }
+//     void display() {
+//         cout << "Store Name: " << store_name << "\n";
+//         cout << "Store ID: " << store_id << "\n\n";
+//     }
+// };
+
+// // initialize static member
+// int store::nextID = 1;
+
+// int main() {
+//     store s1, s2, s3;
+
+//     s1.getdata("ElectroMart");
+//     s2.getdata("BookWorld");
+//     s3.getdata("FreshFoods");
+
+//     s1.display();
+//     s2.display();
+//     s3.display();
+
+//     return 0;
+// }
+
+// 15.
+
+// #include <iostream>
+// using namespace std;
+
+// class College {
+// private:
+//     string name;
+//     int rollno;
+//     int age;   // Data member
+    
+// public: 
+
+//     //Input Data
+//     void getDetails() {
+//         cout << "Enter student Roll: ";
+//         cin >> rollno;
+//         cout << "Enter Name: ";
+//         cin >> name;
+//         cout << "Enter Age: ";
+//         cin >> age;
+//     }
+    
+//     //Output Data
+//     void putDetails() {
+//         cout << "Roll No: " << rollno << endl;
+//         cout << "Name: " << name << endl;
+//         cout << "Age: " << age << endl;
+//         cout << "------------------------" << endl;
+//     }
+// };
+
+// int main() {
+//     //4 objects
+//     College students[4];  
+    
+//     //Input of Students
+//     for (int i = 1; i <= 4; i++) {
+//         cout << "\nEnter details for Student " << i << ":\n";
+//         students[i].getDetails();
+//     }
+    
+//     //Output of students 
+//     cout << "\nStudent Details:\n";
+//     for (int i = 1; i <= 4; i++) {
+//         cout << "\nStudent " << i<< ":\n";
+//         students[i].putDetails();
+//     }
+
+//     return 0;
+// }
+
+16.
+
+// #include <iostream>
+// using namespace std;
+
+// class Student {
+//     int rollNo;
+//     static int count;   // static data member declaration
+
+// public:
+//     Student(int r) {
+//         rollNo = r;
+//         count++;   // increment static variable whenever object is created
+//     }
+
+//     void display() {
+//         cout << "Roll No: " << rollNo << ", Student Number: " << count << endl;
+//     }
+
+//     static void showCount() {   // static member function
+//         cout << "Total Students: " << count << endl;
+//     }
+// };
+
+// // definition of static data member outside class
+// int Student::count = 0;
+
+// int main() {
+//     Student s1(101), s2(102), s3(103);
+
+//     s1.display();
+//     s2.display();
+//     s3.display();
+
+//     Student::showCount(); // accessing static function without object
+//     return 0;
+// }
+
+// 17.
+
+// #include <iostream>
+// using namespace std;
+
+// class Test {
+//     int code;  // normal member variable
+
+// public:
+//     static int count;  // static member variable
+
+//     void setcode(void) {
+//         code = ++count;   // increase count and assign to code
+//     }
+
+//     void showcode(void) {
+//         cout << "Object number: " << code << "\n";
+//     }
+
+//     static void showcount(void) { // static function
+//         cout << "Count: " << count << "\n";
+//     }
+// };
+
+// // Define static variable outside class
+// int Test::count = 0;
+
+// int main() {
+//     Test t1, t2;
+
+//     t1.setcode();
+//     t2.setcode();
+
+//     // Accessing static function without object
+//     Test::showcount();
+
+//     Test t3;
+//     t3.setcode();
+
+//     Test::showcount();
+
+//     t1.showcode();
+//     t2.showcode();
+//     t3.showcode();
+
+//     return 0;
+// }
+
+// 18.
+
+// //Objects
+
+// #include <iostream>
+// using namespace std;
+
+// class Time {
+//     int hours;
+//     int minutes;
+// public:
+//     void getTime(int h, int m) {
+//         hours = h;
+//         minutes = m;
+//     }
+
+//     void putTime() {
+//         cout << hours << " Hour and ";
+//         cout << minutes << " Minutes" << "\n";
+//     }
+
+//     void sum(Time,Time);
+// };
+
+// void Time::sum(Time t1, Time t2) {
+//     minutes = t1.minutes + t2.minutes;
+//     hours = t1.hours + t2.hours + (minutes / 60);
+//     minutes = minutes % 60; 
+// }
+
+// int main() {
+//     Time T1, T2, T3;
+//     int h,m;
+    
+//     cout<<"HOURS AND MINS.(t1):\n";
+//     cin>>h>>m;
+//     T1.getTime(h, m);
+    
+//     cout<<"HOURS AND MINS.(t2):\n";
+//     cin>>h>>m;
+//     T2.getTime(h,m);
+    
+//     T3.sum(T1, T2);
+
+//     cout << "T1 = "; T1.putTime();
+//     cout << "T2 = "; T2.putTime();
+//     cout << "T3 = "; T3.putTime();
+// }
+
+
+// ---------------------------------------------------------------------------------------------------------//
+
+// 19. friends funtion
+
+// #include <iostream>
+// using namespace std;
+
+// class ABC;   // Forward declaration
+
+// class XYZ {
+//     int x;
+// public:
+//     void setvalue(int i) {
+//         x = i;
+//     }
+//     friend void max(XYZ, ABC);  // Friend function declaration
+// };
+
+
+// class ABC {
+//     int a;
+// public:
+//     void setvalue(int i) {
+//         a = i; 
+//     }
+//     friend void max(XYZ, ABC);  // Friend function declaration
+// };
+
+
+// // Friend function definition
+// void max(XYZ m, ABC n) {
+//     if (m.x >= n.a)
+//         cout << m.x;
+//     else
+//         cout << n.a;
+// }
+
+
+// int main() {
+//     ABC abc;
+//     abc.setvalue(100);
+
+//     XYZ xyz;
+//     xyz.setvalue(200);
+
+//     max(xyz, abc);   //Maximum Value will be printed
+//     return 0;
+// }
+// ---------------------------------------------------------------------------------------------------------//
+
+// 20.
+
+// #include <iostream>
+// using namespace std;
+
+// class Distance {
+//     int feet;
+//     int inches;
+// public:
+//     void getDistance(int f, int i) {
+//         feet = f;
+//         inches = i;
+//     }
+
+//     void putDistance() {
+//         cout << feet << " Feet and ";
+//         cout << inches << " Inches" << "\n";
+//     }
+
+//     void sum(Distance, Distance);
+// };
+
+// void Distance::sum(Distance d1, Distance d2) {
+//     inches = d1.inches + d2.inches;
+//     feet = d1.feet + d2.feet + (inches / 12);   // 12 inches = 1 foot
+//     inches = inches % 12;
+// }
+
+// int main() {
+//     Distance D1, D2, D3;
+//     int f, i;
+
+//     cout << "Enter feet and inches (D1): ";
+//     cin >> f >> i;
+//     D1.getDistance(f, i);
+
+//     cout << "Enter feet and inches (D2): ";
+//     cin >> f >> i;
+//     D2.getDistance(f, i);
+
+//     D3.sum(D1, D2);
+
+//     cout << "D1 = "; D1.putDistance();
+//     cout << "D2 = "; D2.putDistance();
+//     cout << "D3 = "; D3.putDistance();
+
+//     return 0;
+// }
+
+// 21.
+
+// #include <iostream>
+// using namespace std;
+
+// class Integer {
+//     int m, n;   // data members
+
+// public:
+//     // Constructor declared & defined
+//     Integer(int x, int y) {
+//         m = x;
+//         n = y;
+//     }
+
+//     // Display function
+//     void display(void) {
+//         cout << "m = " << m << ", n = " << n << endl;
+//     }
+// };
+
+// int main() {
+//     // Constructor called implicitly
+//     Integer Int1(0, 100);
+
+//     // Constructor called explicitly
+//     Integer Int2 = Integer(25, 75);
+
+//     cout << "\nOBJECT 1\n";
+//     Int1.display();
+
+//     cout << "\nOBJECT 2\n";
+//     Int2.display();
+
+//     return 0;
+// }
